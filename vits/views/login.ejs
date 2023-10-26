@@ -1,0 +1,154 @@
+<style>
+    *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+.container{
+    width: 100%;
+    height:100vh;
+    background-image: linear-gradient(rgba(0,0,50,0.8),rgba(0,0,50,0.8)),url(vit.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+.form-box{
+    width: 90%;
+    max-width: 500px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: white;
+    padding: 50px 60px 70px;
+    text-align: center;
+}
+.form-box h1{
+    font-size: 30px;
+    margin-bottom: 60px;
+    color: purple;
+    position: relative;
+}
+.form-box h1::after{
+    content: '';
+    width: 30px;
+    height: 4px;
+    border-radius: 3px;
+    background: purple;
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    transform: translate(-50%);
+}
+.input-field{
+    background-color: rgb(225, 222, 222);
+    margin: 15px 0;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+}
+input{
+    width: 100%;
+    background: transparent;
+    border: 0;
+    outline: 0;
+    padding: 18px 15px;
+}
+.input-field i{
+    margin-left: 15px;
+    color: rgb(133, 131, 131);
+    max-height: 65px;
+    transition: max-height 0.5s;
+    overflow: hidden;
+}
+form p{
+    text-align: left;
+    font-size: 13px;
+}
+form p a{
+    text-decoration: none;
+    color: blue;
+}
+.btn-field{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.btn-field button{
+    flex-basis:48%;
+    background: purple;
+    color: white;
+    height: 40px;
+    border-radius: 20px;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    
+}
+.input-group{
+    height: 280px;
+
+}
+.btn-field button.disable{
+    background: gray;
+    color: rgb(225, 221, 221);
+}
+.hidden {
+    display: none;
+}
+</style>
+<script>
+      src="https://kit.fontawesome.com/d5b3c24099.js"
+      crossorigin="anonymous"
+</script>
+
+<%
+    if(typeof message !== 'undefined'){
+        %>
+            <h4 style="color: red;"><%= message %></h4>
+        <%
+    }
+%>
+
+<div class="container">
+    <div class="form-box">
+      <h1 id="title">Log In</h1>
+       <form action="/" method="post">
+              <div class="input-group">
+                  <div class="input-field" id="namefield">
+                      <i class="fa-solid fa-user fa-bounce"></i>
+                     <input type="text" name="name" placeholder="Name" required />
+                  </div>
+
+                  <div class="input-field">
+                      <i class="fa-solid fa-envelope fa-shake"></i>
+                      <input type="email" name="email" placeholder="Email" required />
+                  </div>
+                  <div class="input-field">
+                      <i class="fa-solid fa-lock fa-flip"></i>
+                      <input type="password" name="password" placeholder="password" required />
+                      
+                  </div>
+                  <p>Already Have an Account <a href="/register">Click Here!</a></p>
+              </div>
+              <div class="btn-field">
+                  <button type="submit" id="signupbtn">Log In</button>
+                  <button type="button" id="signinbtn" class="disable">Sign Up</button>
+              </div> 
+       </form> 
+      
+
+      <!-- <form action="/login" method="post">
+        <input type="text" name="name" placeholder="Name" required />
+        <input type="email" name="email" placeholder="Email" required />
+        <input
+          type="password"
+          name="password"
+          placeholder="Password"
+          required
+        />
+        <button type="submit">Submit</button>
+      </form> --> 
+    </div>
+</div>
