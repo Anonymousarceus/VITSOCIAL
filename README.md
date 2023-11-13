@@ -50,8 +50,7 @@ To set up VITSocial on your local machine, follow these steps:
 Clone the repository:
 
 bash
-Copy code
-git clone https://github.com/your-username/mysocial.git
+
 Navigate to the project directory:
 
 bash
