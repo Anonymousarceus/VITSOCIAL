@@ -89,3 +89,4 @@ Create a pull request to the main repository.
 VITSocial is open-source software licensed under the MIT License. Please review the LICENSE file for more details.
 Enjoy using VITSocial and stay connected with your friends and the online community!
 
+update
